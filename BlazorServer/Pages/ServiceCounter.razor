@@ -1,0 +1,21 @@
+﻿@page "/servicecounter"
+@inject CounterStateService CounterStateService
+@implements IDisposable
+
+<h1>Service Counter</h1>
+
+<p>Parent Count: @CounterStateService.CurrentCount</p>
+
+<ServiceCounterComponent />
+
+@code { 
+    protected override void OnInitialized()
+    {
+        CounterStateService.CurrentCountChanged += StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        CounterStateService.CurrentCountChanged -= StateHasChanged;
+    }
+}

@@ -1,0 +1,11 @@
+﻿@page "/twowaycounter"
+
+<h1>Two Way Counter</h1>
+
+<p>Parent Count: @currentCount</p>
+
+<TwoWayCounterComponent @bind-CurrentCount="currentCount" />
+
+@code {
+    private int currentCount = 0;
+}

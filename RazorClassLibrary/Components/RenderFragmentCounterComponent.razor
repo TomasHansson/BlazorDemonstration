@@ -1,0 +1,20 @@
+﻿<h1>Counter</h1>
+
+<p>Current count: @CurrentCount</p>
+
+<button class="btn btn-primary mb-2" @onclick="IncrementCount">Click me</button>
+
+@ChildContent
+
+@code {
+    [Parameter]
+    public int CurrentCount { get; set; } = 0;
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    private void IncrementCount()
+    {
+        CurrentCount++;
+    }
+}

@@ -1,0 +1,15 @@
+﻿@page "/cascadingcounter"
+
+<h1>Cascading Counter</h1>
+
+<p>Parent Count: @currentCount</p>
+
+<CascadingValue Value="currentCount">
+    <CascadingCounterComponent />
+    <CascadingCounterComponent />
+    <CascadingCounterComponent />
+</CascadingValue>
+
+@code {
+    private int currentCount = 5;
+}

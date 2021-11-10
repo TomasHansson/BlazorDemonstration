@@ -1,0 +1,13 @@
+﻿@page "/renderfragmentcounter"
+
+<h1>Render Fragment Counter</h1>
+
+<p>Parent Count: @currentCount</p>
+
+<RenderFragmentCounterComponent CurrentCount="currentCount">
+    <h3>This is the best type of Counter! I can put in whatever content I want!</h3>    
+</RenderFragmentCounterComponent>
+
+@code {
+    private int currentCount = 0;
+}

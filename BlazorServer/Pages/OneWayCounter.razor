@@ -1,0 +1,11 @@
+﻿@page "/onewaycounter"
+
+<h1>One Way Counter</h1>
+
+<p>Parent Count: @currentCount</p>
+
+<OneWayCounterComponent CurrentCount="currentCount" />
+
+@code {
+    private int currentCount = 0;
+}
