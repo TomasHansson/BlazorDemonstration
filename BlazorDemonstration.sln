@@ -7,13 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServer", "BlazorServe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorClassLibrary", "RazorClassLibrary\RazorClassLibrary.csproj", "{E5897C68-290F-48E4-9E92-5C7ABB191614}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC", "MVC\MVC.csproj", "{232B3460-4FAE-4342-9C34-E83E642D91D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC", "MVC\MVC.csproj", "{232B3460-4FAE-4342-9C34-E83E642D91D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebassembly.Server", "BlazorWebassembly\Server\BlazorWebassembly.Server.csproj", "{BD86AF6F-E6A8-4FA1-8EA3-89A885452B3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebassembly.Server", "BlazorWebassembly\Server\BlazorWebassembly.Server.csproj", "{BD86AF6F-E6A8-4FA1-8EA3-89A885452B3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebassembly.Client", "BlazorWebassembly\Client\BlazorWebassembly.Client.csproj", "{C531131B-C245-4CFD-9932-50D9B699DAC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebassembly.Client", "BlazorWebassembly\Client\BlazorWebassembly.Client.csproj", "{C531131B-C245-4CFD-9932-50D9B699DAC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebassembly.Shared", "BlazorWebassembly\Shared\BlazorWebassembly.Shared.csproj", "{7591E7AC-FAEB-4A43-9480-A6B3EEA1AF77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebassembly.Shared", "BlazorWebassembly\Shared\BlazorWebassembly.Shared.csproj", "{7591E7AC-FAEB-4A43-9480-A6B3EEA1AF77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

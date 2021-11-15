@@ -1,0 +1,32 @@
+﻿@inject IJSRuntime JSRuntime
+
+<h3>Form Component</h3>
+
+<EditForm Model="@person" OnValidSubmit="@Submit">
+    <DataAnnotationsValidator />
+    <div class="form-group my-1">
+        <label for="FirstName">First Name</label>
+        <InputText class="form-control" id="FirstName" @bind-Value="@person.Firstname" />
+        <ValidationMessage For="() => person.Firstname" />
+    </div>
+    <div class="form-group my-1">
+        <label for="LastName">Last Name</label>
+        <InputText class="form-control" id="LastName" @bind-Value="@person.Lastname" />
+        <ValidationMessage For="() => person.Lastname" />
+    </div>
+    <div class="form-group my-1">
+        <label for="FirstName">Age</label>
+        <InputNumber class="form-control" id="Age" @bind-Value="@person.Age" />
+        <ValidationMessage For="() => person.Age" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</EditForm>
+
+@code {
+    private Person person = new();
+
+    private async Task Submit()
+    {
+        await JSRuntime.InvokeVoidAsync("alert", $"Hejsan, {person.Firstname}!");
+    }
+}
