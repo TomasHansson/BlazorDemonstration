@@ -1,4 +1,4 @@
-﻿@typeparam T
+﻿@typeparam T where T : IComparable
 
 @if (Items != null && properties != null)
 {
@@ -12,7 +12,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in Items)
+            @foreach (var item in Items.OrderBy(x => x))
             {
                 <tr>
                     @foreach (var property in properties)

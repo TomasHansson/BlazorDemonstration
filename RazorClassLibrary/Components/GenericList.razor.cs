@@ -11,6 +11,7 @@ namespace RazorClassLibrary.Components
     public partial class GenericList<T>
     {
         [Parameter]
+        [EditorRequired]
         public List<T> Items { get; set; }
         private List<PropertyInfo> properties;
 
