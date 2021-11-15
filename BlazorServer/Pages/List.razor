@@ -1,0 +1,25 @@
+﻿@page "/lists"
+
+<h3>Lists</h3>
+
+<br />
+<GenericList Items="people" />
+<br />
+<GenericList Items="characters" />
+
+@code {
+    private List<Person> people = new List<Person>
+    {
+        new Person { Firstname = "Tomas", Lastname = "Hansson", Age = 37 },
+        new Person { Firstname = "Maria", Lastname = "Hansson", Age = 36 },
+        new Person { Firstname = "Maja", Lastname = "Hansson", Age = 2}
+    };
+
+    private List<Character> characters = new List<Character>
+    {
+        new Character { Hero = "Elder Mok", Archetype = "Healer", Class = "Crusader", Subclass = "Knight" },
+        new Character { Hero = "Nara the Fang", Archetype = "Warrior", Class = "Raider", Subclass = "Thief" },
+        new Character { Hero = "Jaes the Exile", Archetype = "Mage", Class = "Runemaster", Subclass = "" },
+        new Character { Hero = "Jain Fairwood", Archetype = "Scout", Class = "Monk", Subclass = "Prophet" }
+    };
+}

@@ -1,0 +1,49 @@
+﻿@page "/timer"
+
+@implements IDisposable
+
+<h3>Timer</h3>
+
+<p style="@counterStyle">@counter.ToString("0.0")</p>
+
+<button class="btn btn-primary" @onclick="StartTimer" disabled="@(timer != null && timer.Enabled)">Start Timer</button>
+
+@code {
+    private System.Timers.Timer timer;
+    private double counter = 6d;
+    private string counterStyle = "";
+
+    private void StartTimer()
+    {
+        counter = 6d;
+        counterStyle = "";
+        timer = new System.Timers.Timer(100);
+        timer.Elapsed += CountDownTimer;
+        timer.Enabled = true;
+    }
+
+    private void CountDownTimer(Object source, System.Timers.ElapsedEventArgs e)
+    {
+        if (counter >= 0.1)
+        {
+            counter -= 0.1;
+            if (counter <= 3)
+            {
+                counterStyle = "color: red";
+            }
+        }
+        else
+        {
+            timer.Enabled = false;
+        }
+        InvokeAsync(() => StateHasChanged());
+    }
+
+    public void Dispose()
+    {
+        if (timer != null)
+        {
+           timer.Dispose();
+        }
+    }
+}
